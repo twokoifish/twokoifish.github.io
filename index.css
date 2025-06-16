@@ -1,57 +1,67 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('/assets/font/inter.ttf') format('ttf');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@media screen and (width<=600px) {
-    html {
-        margin: 0%;
-    }
-
-    body {
-        background-color: aqua;
-    }
-
-    img {
-        aspect-ratio: auto;
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (width>600px) {
-    html {
-        margin: 0%;
-    }
-
-    body {
-        background-color: aqua;
-    }
-
-    img {
-        aspect-ratio: auto;
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-
-#content {
-    background-color: gray;
-    padding: 20px;
+    font-family: inter;
+    src: url(assets/font/inter.ttf);
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0%;
+    margin: 0px;
+    padding: 25px;
+    font-family: inter;
+    background-color: white;
 }
 
-#footer {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: env(safe-area-inset-bottom);
+h1 {
+    margin: 0;
+}
+
+#header {
+    padding-bottom: 25px;
+}
+
+#header img {
+    border-radius: 50%;
+    width: 200px;
+    border: 5px solid rgba(128, 128, 128, 0.519);
+}
+
+#content {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 12.5px;
+
+    background: rgba(128, 128, 128, 0.519);
+    border-radius: 25px;
+}
+
+#content p {
+    padding-top: 12.5px;
+}
+
+#content .button {
+    padding: 6.25px;
+    align-items: center;
+}
+
+#content a {
+    display: flex;
+    align-items: center;
+    background: gray;
+    width: auto;
+    border-radius: 25px;
+}
+
+@media screen and (width <=650px) {
+    #header img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
 }
