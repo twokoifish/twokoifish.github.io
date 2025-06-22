@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
+    baseURL: '/',
     head: {
       title: 'Andrew Januszko • ajanuszko.me',
       meta: [
