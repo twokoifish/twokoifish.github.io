@@ -9,7 +9,12 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/ui'
   ],
-  css: ['~/assets/css/main.css'],
+  css: ['@/assets/css/main.css'],
+  fonts: {
+    defaults: {
+      weights: [400, 600, 700]
+    }
+  },
   ui: {
     theme: {
       colors: [
