@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
+    cdnURL: 'https://ajanuszko.me/',
     head: {
       title: 'Andrew Januszko • ajanuszko.me',
       meta: [
