@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { TableColumn } from '@nuxt/ui';
 import { en } from '@nuxt/ui/locale'
-import { h, resolveComponent, onMounted } from 'vue';
+import { onMounted } from 'vue';
 
+/// Function used to get the current year and write it to a predefined span.
 function setYear(): void {
   const span = document.getElementById('currentYear')
   if (span) {
@@ -10,6 +10,7 @@ function setYear(): void {
   }
 }
 
+/// On Mounted, set the copyright year.
 onMounted(() => setYear())
 </script>
 
@@ -23,11 +24,14 @@ onMounted(() => setYear())
       <!-- Card with Details, Links, and Copyright -->
       <UCard variant="subtle" class="m-4 shadow-lg text-base">
         <template #header>
+
+          <!-- Header -->
           <p class="font-sans mb-2 font-bold text-2xl">
             Hey, I'm Andrew!
             <span role="img" aria-label="waving hand">👋</span>
           </p>
           
+          <!-- Brief summary of me -->
           <p class="mb-2">I'm a 25-year-old software engineer with a focus on building cross-platform and native mobile apps
             with Flutter and SwiftUI. I have experience with shipping solid, real-world solutions in consulting environments.</p>
 
@@ -53,6 +57,8 @@ onMounted(() => setYear())
             </UTooltip>
           </div>
         </template>
+
+        <!-- Section about my current and past experience -->
         <template #default>
           <p class="text-2xl mb-2 font-bold">Experience</p>
           <div>
@@ -63,6 +69,8 @@ onMounted(() => setYear())
             </p>
           </div>
         </template>
+
+        <!-- Footer with copyright -->
         <template #footer>
           <p>© <span id="currentYear" /> Andrew Januszko. All rights reserved.</p>
         </template>
